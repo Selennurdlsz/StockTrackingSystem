@@ -1,0 +1,450 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{750C07E6-9FFB-428E-8AD4-25F06C6F1D2E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>YazilimSinamaStokTakipSistemi</RootNamespace>
+    <AssemblyName>YazilimSinamaStokTakipSistemi</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.BonusSkins.v17.1" />
+    <Reference Include="DevExpress.Charts.v17.1.Core, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.CodeParser.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.v17.1" />
+    <Reference Include="DevExpress.DataAccess.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.DataAccess.v17.1.UI, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v17.1.Core, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.PivotGrid.v17.1.Core, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.RichEdit.v17.1.Core, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v17.1" />
+    <Reference Include="DevExpress.Sparkline.v17.1.Core" />
+    <Reference Include="DevExpress.Utils.v17.1.UI, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v17.1.Extensions, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v17.1.UI, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v17.1.Wizard, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v17.1" />
+    <Reference Include="DevExpress.Printing.v17.1.Core" />
+    <Reference Include="DevExpress.XtraGauges.v17.1.Core, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGrid.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraNavBar.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPivotGrid.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v17.1.Extensions, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraRichEdit.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeList.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraVerticalGrid.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="FakeData, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FakeData.1.0.0\lib\FakeData.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controller\DemirbasController.cs" />
+    <Compile Include="Controller\DepartmanController.cs" />
+    <Compile Include="Controller\DepartmanPersonelController.cs" />
+    <Compile Include="Controller\KullaniciController.cs" />
+    <Compile Include="Controller\PersonelController.cs" />
+    <Compile Include="Controller\SirketController.cs" />
+    <Compile Include="Controller\StokController.cs" />
+    <Compile Include="Controller\UrunController.cs" />
+    <Compile Include="Model\DataContext2.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataContext2.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\DataContext2.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\DataContext2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataContext2.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Model\DemirbasDepartman.cs">
+      <DependentUpon>DataContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Demirbaslar.cs">
+      <DependentUpon>DataContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\DemirbasView.cs" />
+    <Compile Include="Model\Departmanlar.cs">
+      <DependentUpon>DataContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\DepartmanPersonelView.cs" />
+    <Compile Include="Model\DepartmanView.cs" />
+    <Compile Include="Model\EDeleted.cs" />
+    <Compile Include="Model\eRoller.cs" />
+    <Compile Include="Model\Kullanicilar.cs">
+      <DependentUpon>DataContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\KullaniciRol.cs">
+      <DependentUpon>DataContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\PersonelDepartman.cs">
+      <DependentUpon>DataContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\PersonelKullaniciView.cs" />
+    <Compile Include="Model\Personeller.cs">
+      <DependentUpon>DataContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Roller.cs">
+      <DependentUpon>DataContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Sirketler.cs">
+      <DependentUpon>DataContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\SirketView.cs" />
+    <Compile Include="Model\sp_Deparmandaki_Demirbaslar01_Result.cs">
+      <DependentUpon>DataContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\sp_Departmandaki_Demirbaslar02_Result.cs">
+      <DependentUpon>DataContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\sp_personel_Demirbaslar1_Result.cs">
+      <DependentUpon>DataContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\sp_personel_Demirbaslar_Result.cs">
+      <DependentUpon>DataContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\StokUrunView.cs" />
+    <Compile Include="Model\Urunler.cs">
+      <DependentUpon>DataContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\UrunView.cs" />
+    <Compile Include="Model\Urun_Stok.cs">
+      <DependentUpon>DataContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Zimmetler.cs">
+      <DependentUpon>DataContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tools.cs" />
+    <Compile Include="Views\AdminIslevleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\AdminIslevleri.Designer.cs">
+      <DependentUpon>AdminIslevleri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Demirbaşlar\DemirbasDepartmanTanimlaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Demirbaşlar\DemirbasDepartmanTanimlaForm.Designer.cs">
+      <DependentUpon>DemirbasDepartmanTanimlaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Demirbaşlar\DemirbasDuzenleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Demirbaşlar\DemirbasDuzenleForm.Designer.cs">
+      <DependentUpon>DemirbasDuzenleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Demirbaşlar\DemirbaslariListeleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Demirbaşlar\DemirbaslariListeleForm.Designer.cs">
+      <DependentUpon>DemirbaslariListeleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Demirbaşlar\DemirbasUrunEkleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Demirbaşlar\DemirbasUrunEkleForm.Designer.cs">
+      <DependentUpon>DemirbasUrunEkleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Demirbaşlar\DepartmanZimmetGetirForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Demirbaşlar\DepartmanZimmetGetirForm.Designer.cs">
+      <DependentUpon>DepartmanZimmetGetirForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Departmanlar\DepartmanDuzenleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Departmanlar\DepartmanDuzenleForm.Designer.cs">
+      <DependentUpon>DepartmanDuzenleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Departmanlar\DepartmanEkleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Departmanlar\DepartmanEkleForm.Designer.cs">
+      <DependentUpon>DepartmanEkleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Departmanlar\DepartmanKisiYetkilendirForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Departmanlar\DepartmanKisiYetkilendirForm.Designer.cs">
+      <DependentUpon>DepartmanKisiYetkilendirForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Departmanlar\DepartmanListele.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Departmanlar\DepartmanListele.Designer.cs">
+      <DependentUpon>DepartmanListele.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Departmanlar\DepartmanSorumluListeleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Departmanlar\DepartmanSorumluListeleForm.Designer.cs">
+      <DependentUpon>DepartmanSorumluListeleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PersonelDetay\PersonelDetayForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\PersonelDetay\PersonelDetayForm.Designer.cs">
+      <DependentUpon>PersonelDetayForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Personeller\PersonelEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Personeller\PersonelEkle.Designer.cs">
+      <DependentUpon>PersonelEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Personeller\PersonelListeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Personeller\PersonelListeForm.Designer.cs">
+      <DependentUpon>PersonelListeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\Raporlar\RaporlarForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Raporlar\RaporlarForm.Designer.cs">
+      <DependentUpon>RaporlarForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SatisGorevlisiIslevleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\SatisGorevlisiIslevleri.Designer.cs">
+      <DependentUpon>SatisGorevlisiIslevleri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Urun\UrunDetayiForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Urun\UrunDetayiForm.Designer.cs">
+      <DependentUpon>UrunDetayiForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Urun\UrunEkleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Urun\UrunEkleForm.Designer.cs">
+      <DependentUpon>UrunEkleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Urun\UrunStokListeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Urun\UrunStokListeForm.Designer.cs">
+      <DependentUpon>UrunStokListeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Users\AdminForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Users\AdminForm.Designer.cs">
+      <DependentUpon>AdminForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Users\DepartmanYetkilisiForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Users\DepartmanYetkilisiForm.Designer.cs">
+      <DependentUpon>DepartmanYetkilisiForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DepartmanYetkilisiIslevleriForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\DepartmanYetkilisiIslevleriForm.Designer.cs">
+      <DependentUpon>DepartmanYetkilisiIslevleriForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Users\SatisSorumlusuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Users\SatisSorumlusuForm.Designer.cs">
+      <DependentUpon>SatisSorumlusuForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Views\AdminIslevleri.resx">
+      <DependentUpon>AdminIslevleri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Demirbaşlar\DemirbasDepartmanTanimlaForm.resx">
+      <DependentUpon>DemirbasDepartmanTanimlaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Demirbaşlar\DemirbasDuzenleForm.resx">
+      <DependentUpon>DemirbasDuzenleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Demirbaşlar\DemirbaslariListeleForm.resx">
+      <DependentUpon>DemirbaslariListeleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Demirbaşlar\DemirbasUrunEkleForm.resx">
+      <DependentUpon>DemirbasUrunEkleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Demirbaşlar\DepartmanZimmetGetirForm.resx">
+      <DependentUpon>DepartmanZimmetGetirForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Departmanlar\DepartmanDuzenleForm.resx">
+      <DependentUpon>DepartmanDuzenleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Departmanlar\DepartmanEkleForm.resx">
+      <DependentUpon>DepartmanEkleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Departmanlar\DepartmanKisiYetkilendirForm.resx">
+      <DependentUpon>DepartmanKisiYetkilendirForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Departmanlar\DepartmanListele.resx">
+      <DependentUpon>DepartmanListele.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Departmanlar\DepartmanSorumluListeleForm.resx">
+      <DependentUpon>DepartmanSorumluListeleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Views\PersonelDetay\PersonelDetayForm.resx">
+      <DependentUpon>PersonelDetayForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Personeller\PersonelEkle.resx">
+      <DependentUpon>PersonelEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Personeller\PersonelListeForm.resx">
+      <DependentUpon>PersonelListeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Raporlar\RaporlarForm.resx">
+      <DependentUpon>RaporlarForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SatisGorevlisiIslevleri.resx">
+      <DependentUpon>SatisGorevlisiIslevleri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Urun\UrunDetayiForm.resx">
+      <DependentUpon>UrunDetayiForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Urun\UrunEkleForm.resx">
+      <DependentUpon>UrunEkleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Urun\UrunStokListeForm.resx">
+      <DependentUpon>UrunStokListeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Users\AdminForm.resx">
+      <DependentUpon>AdminForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Users\DepartmanYetkilisiForm.resx">
+      <DependentUpon>DepartmanYetkilisiForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\DepartmanYetkilisiIslevleriForm.resx">
+      <DependentUpon>DepartmanYetkilisiIslevleriForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Users\SatisSorumlusuForm.resx">
+      <DependentUpon>SatisSorumlusuForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <EntityDeploy Include="Model\DataContext2.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>DataContext2.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Model\DataContext2.edmx.diagram">
+      <DependentUpon>DataContext2.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Model\DataContext2.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DataContext2.edmx</DependentUpon>
+      <LastGenOutput>DataContext2.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model\DataContext2.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DataContext2.edmx</DependentUpon>
+      <LastGenOutput>DataContext2.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

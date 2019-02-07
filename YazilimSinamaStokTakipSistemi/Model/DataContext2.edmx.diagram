@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="684c811a77094ac48887ee315b4689ef" Name="Diagram1">
+        <EntityTypeShape EntityType="YzmSinamaModel.DemirbasDepartman" Width="1.5" PointX="5.25" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="YzmSinamaModel.Demirbaslar" Width="1.5" PointX="3" PointY="13.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="YzmSinamaModel.Departmanlar" Width="1.5" PointX="0.75" PointY="7.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="YzmSinamaModel.Kullanicilar" Width="1.5" PointX="3" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="YzmSinamaModel.KullaniciRol" Width="1.5" PointX="5.25" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="YzmSinamaModel.Personeller" Width="1.5" PointX="0.75" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="YzmSinamaModel.Roller" Width="1.5" PointX="3" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="YzmSinamaModel.Sirketler" Width="1.5" PointX="1.5" PointY="10.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="YzmSinamaModel.Urun_Stok" Width="1.5" PointX="3" PointY="16.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="YzmSinamaModel.Urunler" Width="1.5" PointX="0.75" PointY="13.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="YzmSinamaModel.Zimmetler" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="YzmSinamaModel.PersonelDepartman" Width="1.5" PointX="5.75" PointY="6.875" IsExpanded="true" />
+        <AssociationConnector Association="YzmSinamaModel.FK_Demirbas_Departman_Demirbaslar" ManuallyRouted="false" />
+        <AssociationConnector Association="YzmSinamaModel.FK_Demirbas_Departman_Zimmetler" ManuallyRouted="false" />
+        <AssociationConnector Association="YzmSinamaModel.FK_Demirbaslar_Urunler" ManuallyRouted="false" />
+        <AssociationConnector Association="YzmSinamaModel.FK_Departmanlar_Sirketler" ManuallyRouted="false" />
+        <AssociationConnector Association="YzmSinamaModel.FK_Zimmetler_Departmanlar" ManuallyRouted="false" />
+        <AssociationConnector Association="YzmSinamaModel.FK_Kullanici_Rol_Kullanicilar" ManuallyRouted="false" />
+        <AssociationConnector Association="YzmSinamaModel.FK_Kullanicilar_Personeller" ManuallyRouted="false" />
+        <AssociationConnector Association="YzmSinamaModel.FK_Kullanici_Rol_Roller" ManuallyRouted="false" />
+        <AssociationConnector Association="YzmSinamaModel.FK_Zimmetler_Personeller" ManuallyRouted="false" />
+        <AssociationConnector Association="YzmSinamaModel.FK_Urun_Stok_Urunler" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

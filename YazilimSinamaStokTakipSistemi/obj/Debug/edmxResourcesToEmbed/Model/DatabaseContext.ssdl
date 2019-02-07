@@ -1,0 +1,375 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="YzmSinamaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="DemirbasDepartman">
+    <Key>
+      <PropertyRef Name="DemirbasDepartmanId" />
+    </Key>
+    <Property Name="DemirbasDepartmanId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DemirbasId" Type="int" Nullable="false" />
+    <Property Name="ZimmetId" Type="int" Nullable="false" />
+    <Property Name="Adet" Type="int" />
+  </EntityType>
+  <EntityType Name="Demirbaslar">
+    <Key>
+      <PropertyRef Name="DemirbasNo" />
+    </Key>
+    <Property Name="DemirbasNo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UrunId" Type="int" />
+    <Property Name="DemirbasKodu" Type="nvarchar" MaxLength="50" />
+    <Property Name="DemirbasAdi" Type="nvarchar" MaxLength="50" />
+    <Property Name="DemirbasAdedi" Type="int" />
+    <Property Name="DemirbasOzellikleri" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Departmanlar">
+    <Key>
+      <PropertyRef Name="DepartmanId" />
+    </Key>
+    <Property Name="DepartmanId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DepartmanAdi" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Kullanicilar">
+    <Key>
+      <PropertyRef Name="KullaniciId" />
+    </Key>
+    <Property Name="KullaniciId" Type="int" Nullable="false" />
+    <Property Name="KullaniciAdi" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Sifre" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="SonGirisTarihi" Type="smalldatetime" />
+    <Property Name="Silindi" Type="bit" />
+  </EntityType>
+  <EntityType Name="KullaniciRol">
+    <Key>
+      <PropertyRef Name="KullaniciRolId" />
+    </Key>
+    <Property Name="KullaniciRolId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="KullaniciId" Type="int" Nullable="false" />
+    <Property Name="RolId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Personeller">
+    <Key>
+      <PropertyRef Name="PersonelId" />
+    </Key>
+    <Property Name="PersonelId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Ad" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Soyad" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Roller">
+    <Key>
+      <PropertyRef Name="RolId" />
+    </Key>
+    <Property Name="RolId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RolAdi" Type="nvarchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="Urun_Stok">
+    <Key>
+      <PropertyRef Name="StokId" />
+      <PropertyRef Name="UrunId" />
+    </Key>
+    <Property Name="StokId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UrunId" Type="int" Nullable="false" />
+    <Property Name="Stok" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Urunler">
+    <Key>
+      <PropertyRef Name="UrunId" />
+    </Key>
+    <Property Name="UrunId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UrunAdi" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="UrunBirimFiyati" Type="money" Nullable="false" />
+    <Property Name="SatinAlinmaTarihi" Type="smalldatetime" />
+    <Property Name="UrunToptanFiyati" Type="money" Nullable="false" />
+    <Property Name="SatinAlinilanKurum" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Silindi" Type="bit" />
+  </EntityType>
+  <EntityType Name="Zimmetler">
+    <Key>
+      <PropertyRef Name="ZimmetId" />
+    </Key>
+    <Property Name="ZimmetId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PersonelId" Type="int" />
+    <Property Name="DepartmanId" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'YzmSinama.dbo.PersonelDepartman' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="PersonelDepartman">
+    <Key>
+      <PropertyRef Name="PersonelId" />
+      <PropertyRef Name="Ad" />
+      <PropertyRef Name="Soyad" />
+      <PropertyRef Name="DemirbasDepartmanId" />
+      <PropertyRef Name="DepartmanAdi" />
+    </Key>
+    <Property Name="PersonelId" Type="int" Nullable="false" />
+    <Property Name="Ad" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Soyad" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="DemirbasDepartmanId" Type="int" Nullable="false" />
+    <Property Name="DepartmanAdi" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_Demirbas_Departman_Demirbaslar">
+    <End Role="Demirbaslar" Type="Self.Demirbaslar" Multiplicity="1" />
+    <End Role="DemirbasDepartman" Type="Self.DemirbasDepartman" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Demirbaslar">
+        <PropertyRef Name="DemirbasNo" />
+      </Principal>
+      <Dependent Role="DemirbasDepartman">
+        <PropertyRef Name="DemirbasId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Demirbas_Departman_Zimmetler">
+    <End Role="Zimmetler" Type="Self.Zimmetler" Multiplicity="1" />
+    <End Role="DemirbasDepartman" Type="Self.DemirbasDepartman" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Zimmetler">
+        <PropertyRef Name="ZimmetId" />
+      </Principal>
+      <Dependent Role="DemirbasDepartman">
+        <PropertyRef Name="ZimmetId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Demirbaslar_Urunler">
+    <End Role="Urunler" Type="Self.Urunler" Multiplicity="0..1" />
+    <End Role="Demirbaslar" Type="Self.Demirbaslar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Urunler">
+        <PropertyRef Name="UrunId" />
+      </Principal>
+      <Dependent Role="Demirbaslar">
+        <PropertyRef Name="UrunId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Kullanici_Rol_Kullanicilar">
+    <End Role="Kullanicilar" Type="Self.Kullanicilar" Multiplicity="1" />
+    <End Role="KullaniciRol" Type="Self.KullaniciRol" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Kullanicilar">
+        <PropertyRef Name="KullaniciId" />
+      </Principal>
+      <Dependent Role="KullaniciRol">
+        <PropertyRef Name="KullaniciId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Kullanici_Rol_Roller">
+    <End Role="Roller" Type="Self.Roller" Multiplicity="1" />
+    <End Role="KullaniciRol" Type="Self.KullaniciRol" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Roller">
+        <PropertyRef Name="RolId" />
+      </Principal>
+      <Dependent Role="KullaniciRol">
+        <PropertyRef Name="RolId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Kullanicilar_Personeller">
+    <End Role="Personeller" Type="Self.Personeller" Multiplicity="1" />
+    <End Role="Kullanicilar" Type="Self.Kullanicilar" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Personeller">
+        <PropertyRef Name="PersonelId" />
+      </Principal>
+      <Dependent Role="Kullanicilar">
+        <PropertyRef Name="KullaniciId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Urun_Stok_Urunler">
+    <End Role="Urunler" Type="Self.Urunler" Multiplicity="1" />
+    <End Role="Urun_Stok" Type="Self.Urun_Stok" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Urunler">
+        <PropertyRef Name="UrunId" />
+      </Principal>
+      <Dependent Role="Urun_Stok">
+        <PropertyRef Name="UrunId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Zimmetler_Departmanlar">
+    <End Role="Departmanlar" Type="Self.Departmanlar" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Zimmetler" Type="Self.Zimmetler" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Departmanlar">
+        <PropertyRef Name="DepartmanId" />
+      </Principal>
+      <Dependent Role="Zimmetler">
+        <PropertyRef Name="DepartmanId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Zimmetler_Personeller">
+    <End Role="Personeller" Type="Self.Personeller" Multiplicity="0..1" />
+    <End Role="Zimmetler" Type="Self.Zimmetler" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Personeller">
+        <PropertyRef Name="PersonelId" />
+      </Principal>
+      <Dependent Role="Zimmetler">
+        <PropertyRef Name="PersonelId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
+  <Function Name="fnc_DemirbasKodOlustur" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="nvarchar">
+    <Parameter Name="demirbasId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_DemirbasDuzenle" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="demirbasNo" Type="int" Mode="In" />
+    <Parameter Name="departmanId" Type="int" Mode="In" />
+    <Parameter Name="demirbasAdedi" Type="int" Mode="In" />
+    <Parameter Name="demirbasOzellikleri" Type="text" Mode="In" />
+  </Function>
+  <Function Name="sp_DemirbasEkle" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="departmanId" Type="int" Mode="In" />
+    <Parameter Name="urunId" Type="int" Mode="In" />
+    <Parameter Name="demirbasAdedi" Type="int" Mode="In" />
+    <Parameter Name="demirbasOzellikler" Type="text" Mode="In" />
+  </Function>
+  <Function Name="sp_Deparmandaki_Demirbaslar01" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="DepartmanId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_DepartmanaDemirbasEkle" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="DemirbasId" Type="int" Mode="In" />
+    <Parameter Name="DepartmanId" Type="int" Mode="In" />
+    <Parameter Name="Adet" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_Departmandaki_Demirbaslar02" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="DepartmanId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_DepartmanEkle" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="DepartmanAdi" Type="nvarchar" Mode="In" />
+    <Parameter Name="DepartmanId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_DepartmanGuncelle" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="DepartmanId" Type="int" Mode="In" />
+    <Parameter Name="DepartmanAdi" Type="nvarchar" Mode="In" />
+    <Parameter Name="PersonelId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_personel_Demirbaslar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PersonelId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_personel_Demirbaslar1" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PersonelId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_UrunEkle" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UrunAdi" Type="nvarchar" Mode="In" />
+    <Parameter Name="UrunBirimFiyati" Type="money" Mode="In" />
+    <Parameter Name="Stok" Type="int" Mode="In" />
+    <Parameter Name="SatinAlinmaTarihi" Type="datetime" Mode="In" />
+    <Parameter Name="UrunToptanFiyati" Type="money" Mode="In" />
+    <Parameter Name="SatinAlinilanKurum" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_UrunGuncelle" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UrunId" Type="int" Mode="In" />
+    <Parameter Name="UrunAdi" Type="nvarchar" Mode="In" />
+    <Parameter Name="UrunBirimFiyati" Type="money" Mode="In" />
+    <Parameter Name="Stok" Type="int" Mode="In" />
+    <Parameter Name="SatinAlinmaTarihi" Type="datetime" Mode="In" />
+    <Parameter Name="UrunToptanFiyati" Type="money" Mode="In" />
+    <Parameter Name="SatinAlinilanKurum" Type="nvarchar" Mode="In" />
+  </Function>
+  <EntityContainer Name="YzmSinamaModelStoreContainer">
+    <EntitySet Name="DemirbasDepartman" EntityType="Self.DemirbasDepartman" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Demirbaslar" EntityType="Self.Demirbaslar" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Departmanlar" EntityType="Self.Departmanlar" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Kullanicilar" EntityType="Self.Kullanicilar" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="KullaniciRol" EntityType="Self.KullaniciRol" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Personeller" EntityType="Self.Personeller" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Roller" EntityType="Self.Roller" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Urun_Stok" EntityType="Self.Urun_Stok" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Urunler" EntityType="Self.Urunler" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Zimmetler" EntityType="Self.Zimmetler" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PersonelDepartman" EntityType="Self.PersonelDepartman" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [PersonelDepartman].[PersonelId] AS [PersonelId], 
+    [PersonelDepartman].[Ad] AS [Ad], 
+    [PersonelDepartman].[Soyad] AS [Soyad], 
+    [PersonelDepartman].[DemirbasDepartmanId] AS [DemirbasDepartmanId], 
+    [PersonelDepartman].[DepartmanAdi] AS [DepartmanAdi]
+    FROM [dbo].[PersonelDepartman] AS [PersonelDepartman]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK_Demirbas_Departman_Demirbaslar" Association="Self.FK_Demirbas_Departman_Demirbaslar">
+      <End Role="Demirbaslar" EntitySet="Demirbaslar" />
+      <End Role="DemirbasDepartman" EntitySet="DemirbasDepartman" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Demirbas_Departman_Zimmetler" Association="Self.FK_Demirbas_Departman_Zimmetler">
+      <End Role="Zimmetler" EntitySet="Zimmetler" />
+      <End Role="DemirbasDepartman" EntitySet="DemirbasDepartman" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Demirbaslar_Urunler" Association="Self.FK_Demirbaslar_Urunler">
+      <End Role="Urunler" EntitySet="Urunler" />
+      <End Role="Demirbaslar" EntitySet="Demirbaslar" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Kullanici_Rol_Kullanicilar" Association="Self.FK_Kullanici_Rol_Kullanicilar">
+      <End Role="Kullanicilar" EntitySet="Kullanicilar" />
+      <End Role="KullaniciRol" EntitySet="KullaniciRol" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Kullanici_Rol_Roller" Association="Self.FK_Kullanici_Rol_Roller">
+      <End Role="Roller" EntitySet="Roller" />
+      <End Role="KullaniciRol" EntitySet="KullaniciRol" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Kullanicilar_Personeller" Association="Self.FK_Kullanicilar_Personeller">
+      <End Role="Personeller" EntitySet="Personeller" />
+      <End Role="Kullanicilar" EntitySet="Kullanicilar" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Urun_Stok_Urunler" Association="Self.FK_Urun_Stok_Urunler">
+      <End Role="Urunler" EntitySet="Urunler" />
+      <End Role="Urun_Stok" EntitySet="Urun_Stok" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Zimmetler_Departmanlar" Association="Self.FK_Zimmetler_Departmanlar">
+      <End Role="Departmanlar" EntitySet="Departmanlar" />
+      <End Role="Zimmetler" EntitySet="Zimmetler" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Zimmetler_Personeller" Association="Self.FK_Zimmetler_Personeller">
+      <End Role="Personeller" EntitySet="Personeller" />
+      <End Role="Zimmetler" EntitySet="Zimmetler" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
